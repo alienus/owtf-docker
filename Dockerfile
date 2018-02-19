@@ -34,7 +34,7 @@ ENV TERM xterm
 ENV SHELL /bin/bash
 
 # core installation
-RUN python /owtf/scripts/install.sh
+RUN python /owtf/setup.py install
 
 # expose ports
 EXPOSE 8010 8009 8008
