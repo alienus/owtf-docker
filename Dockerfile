@@ -32,9 +32,9 @@ RUN mkdir -p owtf/tools/restricted
 
 ENV TERM xterm
 ENV SHELL /bin/bash
-RUN cd /owtf
+
 # core installation
-RUN python setup.py install
+RUN python /owtf/scripts/install.sh
 
 # expose ports
 EXPOSE 8010 8009 8008
