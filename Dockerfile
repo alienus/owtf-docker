@@ -28,7 +28,7 @@ ENV PYCURL_SSL_LIBRARY openssl
 
 #download latest OWTF
 RUN git clone https://github.com/alienus/owtf.git
-RUN mkdir owtf/tools/restricted
+RUN mkdir -p owtf/tools/restricted
 
 ENV TERM xterm
 ENV SHELL /bin/bash
