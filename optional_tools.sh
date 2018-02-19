@@ -8,7 +8,7 @@ PACKAGES="theharvester \
           dirbuster \
           metasploit-framework \
           wpscan \
-          wapiti \
+          wafw00f \
           waffit \
           hydra \
           metagoofil \

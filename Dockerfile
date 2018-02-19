@@ -3,7 +3,9 @@ FROM kalilinux/kali-linux-docker
 MAINTAINER @viyatb viyat.bhalodia@owasp.org, @alexandrasandulescu alecsandra.sandulescu@gmail.com
 
 # Kali signatures preventive update
-RUN wget -q -O - archive.kali.org/archive-key.asc | apt-key add archive-key.asc
+RUN apt-get update && apt-get install -my gnupg 
+
+RUN wget -q -O - archive.kali.org/archive-key.asc | apt-key add
 
 RUN apt-get update --fix-missing && apt-get upgrade -y
 
@@ -25,7 +27,7 @@ RUN /bin/bash /usr/bin/optional_tools.sh
 ENV PYCURL_SSL_LIBRARY openssl
 
 #download latest OWTF
-RUN git clone -b develop https://github.com/owtf/owtf.git
+RUN git clone https://github.com/alienus/owtf.git
 RUN mkdir owtf/tools/restricted
 
 ENV TERM xterm
