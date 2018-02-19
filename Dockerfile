@@ -1,6 +1,6 @@
 FROM kalilinux/kali-linux-docker
 
-MAINTAINER @viyatb viyat.bhalodia@owasp.org, @alexandrasandulescu alecsandra.sandulescu@gmail.com
+MAINTAINER @theAlienus
 
 # Kali signatures preventive update
 RUN apt-get update && apt-get install -my gnupg 
